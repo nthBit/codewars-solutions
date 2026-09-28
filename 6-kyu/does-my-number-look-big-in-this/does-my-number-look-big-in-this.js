@@ -1,10 +1,13 @@
 function narcissistic(value) {
+  const digits = value.toString();
   let finalNum = 0;
-  value.toString().split("").forEach(num => {
-    finalNum += parseInt(num) ** value.toString().length;
+  
+  digits.split("").forEach(num => {
+    finalNum += parseInt(num) ** digits.length;
   });
   if (finalNum === value) {
     return true;
   }
+  
   return false;
 }
